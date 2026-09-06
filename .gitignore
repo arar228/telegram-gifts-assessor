@@ -30,6 +30,14 @@ wheels/
 # Environment variables
 .env
 .env.local
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.session-wal
+*.session-shm
 
 # IDE
 .vscode/
