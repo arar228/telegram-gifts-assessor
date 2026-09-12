@@ -28,8 +28,9 @@ from telethon.tl.functions.payments import GetSavedStarGiftsRequest
 from telethon.tl import types
 from telethon.errors import UsernameNotOccupiedError
 
-API_ID = int(os.getenv('API_ID', '21192413'))
-API_HASH = os.getenv('API_HASH', '2d7b04c4c7d7b93826277d37c9e4e2e4')
+from credentials_config import load_telegram_credentials
+
+API_ID, API_HASH = load_telegram_credentials()
 PHONE_NUMBER = os.getenv('PHONE_NUMBER', '').strip()
 SESSION_NAME = 'gifts_session'
 
